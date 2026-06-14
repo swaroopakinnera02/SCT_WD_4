@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    /* Professional Gradient Theme */
+    background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+}
+
+.container{
+    width:100%;
+    max-width:550px;
+
+    /* Glass Professional Card */
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.35);
+
+    color:white;
+}
+
+/* Heading */
+
+h1{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:25px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#f8fafc;
+}
+
+/* Input Section */
+
+.task-input{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* Inputs */
+
+.task-input input{
+    padding:14px;
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.10);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+.task-input input::placeholder{
+    color:#cbd5e1;
+}
+
+/* Focus Effect */
+
+.task-input input:focus{
+    border:1px solid #38bdf8;
+
+    background:rgba(255,255,255,0.16);
+
+    box-shadow:0 0 15px rgba(56,189,248,0.4);
+}
+
+/* Add Button */
+
+.task-input button{
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#06b6d4,#2563eb);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.task-input button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(37,99,235,0.45);
+}
+
+/* Task List */
+
+ul{
+    list-style:none;
+
+    margin-top:25px;
+}
+
+/* Each Task Card */
+
+li{
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.10);
+
+    padding:18px;
+
+    border-radius:16px;
+
+    margin-bottom:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    transition:0.3s;
+}
+
+/* Hover Effect */
+
+li:hover{
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,0.12);
+}
+
+/* Task Info */
+
+.task-info{
+    flex:1;
+}
+
+.task-info div:first-child{
+    font-size:17px;
+
+    font-weight:500;
+
+    color:#f8fafc;
+}
+
+/* Completed Task */
+
+.completed{
+    text-decoration:line-through;
+
+    opacity:0.6;
+}
+
+/* Date */
+
+.task-date{
+    margin-top:6px;
+
+    font-size:13px;
+
+    color:#93c5fd;
+}
+
+/* Buttons Area */
+
+.task-buttons{
+    display:flex;
+
+    gap:10px;
+
+    margin-top:12px;
+}
+
+/* Buttons Common */
+
+.task-buttons button{
+    border:none;
+
+    padding:9px 12px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+/* Complete Button */
+
+.complete-btn{
+    background:#22c55e;
+
+    color:white;
+}
+
+.complete-btn:hover{
+    background:#16a34a;
+
+    transform:scale(1.05);
+}
+
+/* Edit Button */
+
+.edit-btn{
+    background:#facc15;
+
+    color:black;
+}
+
+.edit-btn:hover{
+    background:#eab308;
+
+    transform:scale(1.05);
+}
+
+/* Delete Button */
+
+.delete-btn{
+    background:#ef4444;
+
+    color:white;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+
+    transform:scale(1.05);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#475569;
+
+    border-radius:10px;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    .container{
+        padding:22px;
+    }
+
+    h1{
+        font-size:1.9rem;
+    }
+
+    li{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .task-buttons{
+        width:100%;
+
+        justify-content:flex-start;
+    }
+}
